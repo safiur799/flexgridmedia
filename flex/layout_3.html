@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <title>Grid</title>
+    <style>
+        #parent{
+            display: grid;
+            grid-gap:10px;
+            padding: 10px;
+           
+            background-color: skyblue;
+            grid-template:"a a a"
+                          "b b c"
+                          "b b d"
+                          "b b e";
+        }
+        @media (min-width:480px){
+            #parent{
+                background-color:blue ;
+            }
+        }
+        @media (min-width:600px){
+            #parent{
+                background-color:teal;
+            }
+        }
+       
+        @media (min-width:680px){
+            #parent{
+                background-color:pink;
+                grid-template:"a a a"
+                              "b b b"
+                              "c c c"
+                              "d d d"
+                              "e e e";
+                
+            }
+           
+        }
+        @media (min-width:1280px){
+            #parent{
+                
+                background-color:teal ;
+                 grid-template:"a a a"
+                               "b b b"
+                               "b b b"
+                               "b b b"
+                               "c d e";
+            }
+        }
+        #child1{
+            grid-area: a;
+            background-color: yellow;
+        }
+        #child2{
+            grid-area: b;
+            background-color: red;
+        }
+        #child3{
+            grid-area: c;
+            background-color: green;
+        }
+        #child4{
+            grid-area: d;
+            background-color: green;
+        }
+        #child5{
+            grid-area: e;
+            background-color: green;
+        }
+    </style>
+    <body>
+        <div id="parent">
+            <div id="child1">Navigation</div>
+            <div id="child2">LEFT BOX</div>
+            <div id="child3">RIGHT BOX1</div>
+            <div id="child4">RIGHT BOX2</div>
+            <div id="child5">RIGHT BOX3</div>
+        </div>
+    </body>
+</html>
