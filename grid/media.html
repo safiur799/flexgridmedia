@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<title>Grid</title>
+<style>
+    #parent {
+        display: grid;
+        grid-gap: 10px;
+        padding: 10px;
+
+        background-color: skyblue;
+        grid-template: "a a a"
+                           "b b b"
+                           "c c c"
+       
+    }
+
+    @media (min-width:480px) {
+        #parent {
+            background-color: blue;
+        }
+    }
+
+    @media (min-width:600px) {
+        #parent {
+            background-color: teal;
+        }
+    }
+
+    @media (min-width:680px) {
+        #parent {
+            background-color: pink;
+            grid-template: "a a a a"
+                       "b b c c"
+                       "b b c c"
+                       "b b c c";
+
+        }
+
+    }
+
+
+    #child1 {
+        grid-area: a;
+        background-color: yellow;
+    }
+
+    #child2 {
+        grid-area: b;
+        background-color: red;
+    }
+
+    #child3 {
+        grid-area: c;
+        background-color: green;
+    }
+
+</style>
+
+<body>
+    <div id="parent">
+        <div id="child1">Navigation</div>
+        <div id="child2">LEFT BOX</div>
+        <div id="child3">RIGHT BOX</div>
+    </div>
+</body>
+
+</html>
