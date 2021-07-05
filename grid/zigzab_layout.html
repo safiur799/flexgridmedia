@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <title>grid</title>
+    <style>
+        #parent{
+            display: grid;
+            grid-gap:20px;
+            grid-template-columns: 100px 100px 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px 100px 100px;
+            padding: 10px;
+
+        }
+        .first{
+           
+            background-color: teal;
+            border-radius: 5px;
+
+        }
+        #id1{
+            grid-area: 1/2/1/5;
+        }
+        #id4{
+            grid-area: 2/1/2/4;
+        }
+        #id7{
+            grid-area: 3/3/3/6;
+        }
+
+    </style>
+    <body>
+        <div id="parent">
+            <div id="id1" class="first"></div>
+            <div id="id2" class="first"></div>
+            <div id="id3" class="first"></div>
+            <div id="id4" class="first"></div>
+            <div id="id5" class="first"></div>
+            <div id="id6" class="first"></div>
+            <div id="id7" class="first"></div>
+            <div id="id8" class="first"></div>
+            <div id="id9" class="first"></div>
+            
+        </div>
+    </body>
+</html>
